@@ -1,187 +1,266 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  <title>我的博客</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="记录生活点滴">
-<meta property="og:type" content="website">
-<meta property="og:title" content="我的博客">
-<meta property="og:url" content="http://elfwalk.github.io/index.html">
-<meta property="og:site_name" content="我的博客">
-<meta property="og:description" content="记录生活点滴">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的博客">
-<meta name="twitter:description" content="记录生活点滴">
-  
-    <link rel="alternate" href="/atom.xml" title="我的博客" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Huangyk.GitHub.io by huangyk</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Huangyk.GitHub.io</h1>
+      <h2 class="project-tagline">关于ReactNative</h2>
+    </section>
 
-</head>
+    <section class="main-content">
+      <h4>
+<a id="一实现第一部分" class="anchor" href="#%E4%B8%80%E5%AE%9E%E7%8E%B0%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>一、实现第一部分</h4>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">我的博客</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">一天进步一点</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://elfwalk.github.io"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/10/30/hello-world/" class="article-date">
-  <time datetime="2016-10-30T13:11:12.049Z" itemprop="datePublished">2016-10-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/30/hello-world/">Hello World</a>
-    </h1>
-  
+<pre><code>1、首先，我们创建一个项目
+现在我们需要创建一个React-Native的项目，因此可以按照下面的步骤：
+打开终端，开始React-Native开发的旅程吧。
+(1)安装命令行工具(已经安装了就不用再安装了)：sudo npm install -g react-native-cli
+(2)创建一个空项目：react-native init HelloWorld
+(3)找到创建的HelloWorld项目,双击HelloWorld.xcodeproj即可在xcode中打开项目。xcodeproj是xcode的项目文件。
+(4)在xcode中，使用快捷键cmd + R即可启动项目。
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+2、清除其余多余的代码,剩下的代码如下：
+/**
+* Sample React Native App
+* https://github.com/facebook/react-native
+*/
+'use strict';
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://elfwalk.github.io/2016/10/30/hello-world/" data-id="ciuwplhql00008s9fseqxn7l5" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
+var React = require('react-native');
+var {
+    AppRegistry,
+    StyleSheet,
+    Text,
+    View,
+} = React;
 
 
+var HelloWorld = React.createClass({
+    render: function() {
+        return (
+            &lt;View&gt;&lt;/View&gt;
+        );
+    }
+});
+var styles = StyleSheet.create({
+
+});
+
+
+AppRegistry.registerComponent('HelloWorld', () =&gt; HelloWorld);
+
+3、此时，除了闪屏外，看到应该是空白的页面。开工，分析页面：
+（1）大致有4个板块
+（2）先是左右两栏(1/3和2/3)；后是上下两栏(1/2)。我们先用View组件布局。
+</code></pre>
+
+<p><img src="pic/4_2.png" alt="美团"></p>
+
+<pre><code>4、完成初步布局
+看如下代码，应该很清楚了，View里面嵌入并列的两栏。
+</code></pre>
+
+<p><img src="pic/4_3.png" alt="美团">  </p>
+
+<pre><code>实现效果如下：
+</code></pre>
+
+<p><img src="pic/4_4.png" alt="美团">  </p>
+
+<pre><code>5、添加内部图片和文字
+其实做这种布局，还是有很多的细节，粗糙的效果如下,这块代码暂时不贴了，最后一并贴出来：
+</code></pre>
+
+<p><img src="pic/4_5.png" alt="美团">      </p>
+
+<h4>
+<a id="二按照第一部分原理完成整个页面" class="anchor" href="#%E4%BA%8C%E6%8C%89%E7%85%A7%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%E5%8E%9F%E7%90%86%E5%AE%8C%E6%88%90%E6%95%B4%E4%B8%AA%E9%A1%B5%E9%9D%A2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>二、按照第一部分原理，完成整个页面</h4>
+
+<pre><code>完成的效果如下：
+</code></pre>
+
+<p><img src="pic/4_6.png" alt="美团">      </p>
+
+<pre><code>整个代码如下：
+/**
+* Sample React Native App
+* https://github.com/facebook/react-native
+*/
+'use strict';
+
+var React = require('react-native');
+var {
+    AppRegistry,
+    StyleSheet,
+    Text,
+    View,
+    Image,
+} = React;
+
+
+var HelloWorld = React.createClass({
+    render: function() {
+        return (
+            &lt;View style={{}}&gt;
+                &lt;View style={[styles.height160, styles.row,]}&gt;
+                &lt;View style={[styles.height160, styles.part_1_left,]}&gt;
+                &lt;Text style={[styles.font14, styles.marTop18, styles.marLeft10, styles.green]}&gt;我们约吧&lt;/Text&gt;
+                &lt;Text style={[styles.font10, styles.marTop14, styles.marLeft10]}&gt;恋爱家人好朋友&lt;/Text&gt;
+                &lt;Image style={[styles.yue]} source={{uri: 'http://p0.meituan.net/mmc/fe4d2e89827aa829e12e2557ded363a112289.png'}}&gt;&lt;/Image&gt;
+            &lt;/View&gt;
+            &lt;View style={[styles.height160, styles.part_1_right,]}&gt;
+            &lt;View style={[styles.row, {flex:1}]}&gt;
+            &lt;View style={{flex:1}}&gt;
+              &lt;Text style={[styles.font14, {marginLeft:30}, styles.red]}&gt;超低价值&lt;/Text&gt;
+              &lt;Text style={[styles.font14, {fontSize:12, marginTop:14, marginLeft:30,color: 'black'}]}&gt;十元惠生活&lt;/Text&gt;
+            &lt;/View&gt;
+            &lt;View style={[{flex:1}, {marginTop:-13}]}&gt;
+              &lt;Image style={[styles.hanbao]} source={{uri: 'http://p0.meituan.net/mmc/a06d0c5c0a972e784345b2d648b034ec9710.jpg'}}&gt;&lt;/Image&gt;
+            &lt;/View&gt;
+          &lt;/View&gt;
+          &lt;View style={[{flex:1, flexDirection: 'row',borderTopWidth:0.5, borderColor:'#DDD8CE'}]}&gt;
+            &lt;View style={{flex:1, borderRightWidth:1, borderColor:'#DDD8CE',}}&gt;
+                &lt;Text style={{color:'#F742AB', marginLeft:5,fontWeight:'bold', fontSize:15, marginTop:8}}&gt;聚餐宴请&lt;/Text&gt;
+                &lt;Text style={{fontSize:12,marginTop:4, marginLeft:5}}&gt;朋友家人常聚聚&lt;/Text&gt;
+                &lt;Image style={{height:25,width:25, alignSelf: 'center'}} source={{uri: 'http://p1.meituan.net/mmc/08615b8ae15d03c44cc5eb9bda381cb212714.png'}}&gt;&lt;/Image&gt;
+            &lt;/View&gt;
+            &lt;View style={{flex:1,}}&gt;
+                &lt;Text style={[styles.font14,{color:'#FF8601', marginTop:8, marginLeft:5}]}&gt;名店抢购&lt;/Text&gt;
+                &lt;Text style={[{marginLeft:5, fontSize:12,marginTop:4,}]}&gt;还有&lt;/Text&gt;
+                &lt;Text style={[{marginLeft:5, fontSize:12,marginTop:4,}]}&gt;12:06:12分&lt;/Text&gt;
+            &lt;/View&gt;
+          &lt;/View&gt;
+        &lt;/View&gt;
+    &lt;/View&gt;
+    &lt;View&gt;
+      &lt;View style={{borderBottomWidth:1,borderTopWidth:1, borderColor:'#DDD8CE', marginTop:40,height:65, flexDirection: 'row',paddingTop:10}}&gt;
+        &lt;View style={[{flex:1}]}&gt;
+            &lt;Text style={{fontSize:17, color:'#FF7F60', fontWeight:'900', marginLeft:7}}&gt;一元吃大餐&lt;/Text&gt;
+            &lt;Text style={{marginLeft:7, fontSize:12, marginTop:3}}&gt;新用户专享&lt;/Text&gt;
+        &lt;/View&gt;
+        &lt;View style={{flex:1}}&gt;
+            &lt;Image style={{height:50, width:120}} source={{uri:'http://p1.meituan.net/280.0/groupop/7f8208b653aa51d2175848168c28aa0b23269.jpg'}}&gt;&lt;/Image&gt;
+        &lt;/View&gt;
+      &lt;/View&gt;
+    &lt;/View&gt;
+    &lt;View&gt;
+      &lt;View style={{flexDirection: 'row',}}&gt;
+        &lt;View style={[styles.row, {borderColor:'#DDD8CE', borderRightWidth:1}]}&gt;
+          &lt;View style={{flex:1,}}&gt;
+            &lt;Text style={{fontSize:17, color:'#EA6644', fontWeight:'bold', marginLeft:7}}&gt;撸串节狂欢&lt;/Text&gt;
+            &lt;Text style={{fontSize:12, color:'#97979A', marginTop:3, marginLeft:7}}&gt;烧烤6.6元起&lt;/Text&gt;
+          &lt;/View&gt;
+          &lt;View style={{flex:1}}&gt;
+            &lt;Image style={{width:60,height:55}} source={{uri: 'http://p1.meituan.net/280.0/groupop/fd8484743cbeb9c751a00e07573c3df319183.png'}}&gt;&lt;/Image&gt;
+          &lt;/View&gt;
+        &lt;/View&gt;
+        &lt;View style={styles.row}&gt;
+          &lt;View style={{flex:1}}&gt;
+            &lt;Text style={{fontSize:17, color:'#EA6644', fontWeight:'bold', marginLeft:7}}&gt;毕业旅行&lt;/Text&gt;
+            &lt;Text style={{fontSize:12, color:'#97979A', marginTop:3, marginLeft:7}}&gt;选好酒店才安心&lt;/Text&gt;
+          &lt;/View&gt;
+          &lt;View style={{flex:1}}&gt;
+            &lt;Image style={{width:60,height:55}} source={{uri: 'http://p0.meituan.net/280.0/groupop/ba4422451254f23e117dedb4c6c865fc10596.jpg'}}&gt;&lt;/Image&gt;
+          &lt;/View&gt;
+        &lt;/View&gt;
+      &lt;/View&gt;
+      &lt;View style={{flexDirection: 'row',}}&gt;
+        &lt;View style={[styles.row, {borderColor:'#DDD8CE', borderRightWidth:1,  marginLeft:1},]}&gt;
+          &lt;View style={{flex:1}}&gt;
+            &lt;Text style={{fontSize:17, color:'#EA6644', fontWeight:'bold', marginLeft:7}}&gt;0元餐来袭&lt;/Text&gt;
+            &lt;Text style={{fontSize:12, color:'#97979A', marginTop:3, marginLeft:7}}&gt;免费吃喝玩乐购&lt;/Text&gt;
+          &lt;/View&gt;
+          &lt;View style={{flex:1}}&gt;
+            &lt;Image style={{width:60,height:55}} source={{uri: 'http://p0.meituan.net/280.0/groupop/6bf3e31d75559df76d50b2d18630a7c726908.png'}}&gt;&lt;/Image&gt;
+          &lt;/View&gt;
+        &lt;/View&gt;
+        &lt;View style={styles.row}&gt;
+          &lt;View style={{flex:1}}&gt;
+            &lt;Text style={{fontSize:17, color:'#EA6644', fontWeight:'bold', marginLeft:7}}&gt;热门团购&lt;/Text&gt;
+            &lt;Text style={{fontSize:12, color:'#97979A', marginTop:3, marginLeft:7}}&gt;大家都在买什么&lt;/Text&gt;
+          &lt;/View&gt;
+          &lt;View style={{flex:1}}&gt;
+            &lt;Image style={{width:60,height:55}} source={{uri: 'http://p1.meituan.net/mmc/a616a48152a895ddb34ca45bd97bbc9d13050.png'}}&gt;&lt;/Image&gt;
+          &lt;/View&gt;
+        &lt;/View&gt;
+      &lt;/View&gt;
+    &lt;/View&gt;
+  &lt;/View&gt;
+);
+}
+});
+
+
+var styles = StyleSheet.create({
+    row:{
+    flexDirection: 'row',
+    paddingTop:20
+},
+marTop18:{
+    marginTop:18,
+},
+marTop14:{
+    marginTop:14,
+},
+font14:{
+    fontSize:14,
+},
+font10:{
+    fontSize:12,
+},
+height160:{
+    height: 160
+},
+yue:{
+    height:80,
+},
+green:{
+    color:'#55A44B',
+    fontWeight: '900'
+},
+red:{
+    color: '#FF3F0D',
+    fontWeight: '900'
+},
+marLeft10:{
+    marginLeft:10,
+},
+part_1_left:{
+    flex: 1,
+    borderColor: '#DCD7CD',
+    borderRightWidth: 0.5,
+    borderBottomWidth: 1,
+},
+part_1_right:{
+    flex:2,
+    borderColor: '#DCD7CD',
+    borderBottomWidth: 1,
+},
+hanbao:{
+    height:55,
+    width:55
+}
+});
+
+
+AppRegistry.registerComponent('HelloWorld', () =&gt; HelloWorld);
+</code></pre>
+
+      <footer class="site-footer">
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
   
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2016/10/30/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2016 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
-  </div>
-</body>
+  </body>
 </html>
